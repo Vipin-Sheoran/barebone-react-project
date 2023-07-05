@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/home';
 
 function App() {
@@ -7,9 +7,9 @@ function App() {
 
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        </Routes>
     </Router>
   )
 }
